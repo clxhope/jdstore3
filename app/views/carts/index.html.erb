@@ -12,6 +12,7 @@
           <td colspan="2"> 商品资讯 </td>
           <td>单价</td>
           <td>数量</td>
+          <td>操作选项</td>
         </tr>
       </thead>
 
@@ -35,6 +36,11 @@
             </td>
             <td>
               <%= cart_item.quantity %>
+            </td>
+            <td>
+              <%= link_to cart_item_path(cart_item.product_id), method: :delete do %>
+                <i class="fa fa-trash"></i>
+              <% end %>
             </td>
           </tr>
         <% end %>
